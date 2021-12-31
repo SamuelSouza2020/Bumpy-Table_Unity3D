@@ -23,7 +23,7 @@ public class BallD : MonoBehaviour
         bur.transform.position = new Vector3(gameObject.transform.position.x, bur.transform.position.y, gameObject.transform.position.z);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector3(10, 0, 10);
+            rb.velocity = new Vector3(6, 0, 6);
         }
         if(!player.fora)
         {
