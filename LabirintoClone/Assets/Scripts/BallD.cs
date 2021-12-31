@@ -8,10 +8,13 @@ public class BallD : MonoBehaviour
     GameObject bur;
 
     Rigidbody rb;
+    [SerializeField]
+    Player player;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,10 @@ public class BallD : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(10, 0, 10);
+        }
+        if(!player.fora)
+        {
+            rb.velocity = Vector3.zero;
         }
     }
 }

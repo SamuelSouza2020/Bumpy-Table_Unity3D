@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody rig;
     float tiltX, tiltY, sensib = 5;
-    bool fora = true;
+    public bool fora = true;
     [SerializeField]
     Vector3 nPos;
 
