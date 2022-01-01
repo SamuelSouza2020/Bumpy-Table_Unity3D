@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+//using UnityEngine.UI;
+//using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance;
+    //public static UIManager instance;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (instance == null)
         {
@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     void Carrega(Scene cena, LoadSceneMode mode)
     {
         S
-    }
+    }*/
     private void Start()
     {
         
