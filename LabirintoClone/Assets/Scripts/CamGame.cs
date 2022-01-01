@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CamGame : MonoBehaviour
 {
-    bool ok = false;
+    //BallD vai utilizar o ok para verificar se a camera já se posicionou
+    public bool ok = false;
     float vel = 0.3f;
 
     // Update is called once per frame
