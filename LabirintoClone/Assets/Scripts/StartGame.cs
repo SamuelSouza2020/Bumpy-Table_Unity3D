@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-
+    [SerializeField]
     Button iniciarGm, quest;
 
-    void Awake()
+    void Start()
     {
-        iniciarGm = GameObject.Find("Start").GetComponent<Button>();
+        iniciarGm = GameObject.Find("StartGM").GetComponent<Button>();
         quest = GameObject.Find("Quest").GetComponent<Button>();
 
         iniciarGm.onClick.AddListener(FaseInicial);
