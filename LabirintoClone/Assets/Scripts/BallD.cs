@@ -24,7 +24,7 @@ public class BallD : MonoBehaviour
     {
         Debug.Log(rb.velocity.magnitude);
         bur.transform.position = new Vector3(gameObject.transform.position.x, bur.transform.position.y, gameObject.transform.position.z);
-        if(game.ok && rb.velocity.magnitude <= 5)
+        if(game.ok && rb.velocity.magnitude <= 7)
         {
             rb.velocity = new Vector3(Random.Range(-6,6), 0, Random.Range(-6, 6));
         }
