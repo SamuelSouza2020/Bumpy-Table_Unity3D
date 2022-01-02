@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     Rigidbody rig;
-    float tiltX, tiltY, sensib = 5;
+    float tiltX, tiltY, sensib = 10;
     public bool fora = true;
     [SerializeField]
     Vector3 nPos;
