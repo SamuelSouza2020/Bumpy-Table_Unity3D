@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,10 +13,15 @@ public class Player : MonoBehaviour
     Vector3 nPos;
     CamGame gameCam;
 
+    GameObject canvasTP;
+    Text tTempSt;
+
     void Start()
     {
         rig = GetComponent<Rigidbody>();
         gameCam = GameObject.Find("Main Camera").GetComponent<CamGame>();
+        tTempSt = GameObject.Find("TempoStart").GetComponent<Text>();
+        canvasTP = GameObject.Find("CanvasTp");
     }
     void Update()
     {
@@ -45,5 +52,20 @@ public class Player : MonoBehaviour
             rig.velocity = new Vector3(rig.velocity.x, rig.velocity.y, rig.velocity.z);
             fora = false;
         }
+        if (other.gameObject.CompareTag("BuracoFim"))
+        {
+            nPos = new Vector3(other.transform.position.x, transform.position.y,
+                other.transform.position.z);
+            rig.velocity = new Vector3(rig.velocity.x, rig.velocity.y, rig.velocity.z);
+            StartCoroutine(PerdeuGm());
+            canvasTP.SetActive(true);
+            tTempSt.text = "PERDEU";
+            fora = false;
+        }
+    }
+    IEnumerator PerdeuGm()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
     }
 }

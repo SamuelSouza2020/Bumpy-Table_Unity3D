@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 664827683}
   m_Layer: 0
   m_Name: Buraco (3)
-  m_TagString: Buraco
+  m_TagString: BuracoFim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1656,6 +1656,7 @@ GameObject:
   - component: {fileID: 1196031440}
   - component: {fileID: 1196031443}
   - component: {fileID: 1196031442}
+  - component: {fileID: 1196031444}
   - component: {fileID: 1196031441}
   m_Layer: 0
   m_Name: Buraco
@@ -1740,6 +1741,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196031439}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1196031444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196031439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ab62bcafb26f045b8e515f8a26d188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proFase: 4
 --- !u!1 &1384544072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +1989,7 @@ GameObject:
   - component: {fileID: 1959477747}
   m_Layer: 0
   m_Name: Buraco (2)
-  m_TagString: Buraco
+  m_TagString: BuracoFim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
