@@ -34,16 +34,24 @@ public class Player : MonoBehaviour
         {
             if (fora)
             {
-                if(rig.velocity.magnitude >= 0.2 && !mov)
+                if(rig.velocity.magnitude > 0.7)
+                    aud.volume = 0.7f;
+                else
+                    aud.volume = rig.velocity.magnitude;
+
+
+                if (rig.velocity.magnitude >= 0.2 && !mov)
                 {
                     aud.Play();
                     mov = true;
                 }
-                if(rig.velocity.magnitude <= 0.2)
+                if(rig.velocity.magnitude < 0.2)
                 {
                     aud.Stop();
                     mov = false;
                 }
+
+
                 tiltX = Input.acceleration.x * sensib;
                 tiltY = Input.acceleration.y * sensib;
                 rig.velocity = new Vector3(tiltX, rig.velocity.y, tiltY);

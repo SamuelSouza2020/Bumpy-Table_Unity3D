@@ -445,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fora: 1
+  mov: 0
   nPos: {x: 0, y: 0, z: 0}
 --- !u!82 &638229335
 AudioSource:
@@ -456,7 +457,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0a2af1de90c8c23459e96a42b0156266, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ed14a797f05a4f94098cce74668bf007, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.611
   m_Pitch: 1
