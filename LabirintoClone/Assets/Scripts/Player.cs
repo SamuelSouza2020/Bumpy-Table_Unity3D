@@ -37,12 +37,31 @@ public class Player : MonoBehaviour
         {
             if (fora)
             {
-                if(rig.velocity.magnitude > 3)
+                if (rig.velocity.magnitude > 5)
+                {
                     aud.volume = 0.5f;
+                    aud.pitch = 1.6f;
+                }
+                else if(rig.velocity.magnitude > 3 && rig.velocity.magnitude <= 5)
+                {
+                    aud.volume = 0.5f;
+                    aud.pitch = 1.35f;
+                }
                 else if(rig.velocity.magnitude > 2 && rig.velocity.magnitude <= 3)
+                {
+                    aud.volume = 0.5f;
+                    aud.pitch = 1.2f;
+                }  
+                else if(rig.velocity.magnitude > 1.5 && rig.velocity.magnitude <= 2)
+                {
                     aud.volume = 0.4f;
-                else if (rig.velocity.magnitude > 1 && rig.velocity.magnitude <= 2)
+                    aud.pitch = 1;
+                }
+                else if (rig.velocity.magnitude > 1 && rig.velocity.magnitude <= 1.5)
+                {
                     aud.volume = 0.3f;
+                    aud.pitch = 1;
+                }
                 else if (rig.velocity.magnitude > 0.7 && rig.velocity.magnitude <= 0.1)
                     aud.volume = 0.2f;
                 else if (rig.velocity.magnitude > 0.3 && rig.velocity.magnitude <= 0.7)
