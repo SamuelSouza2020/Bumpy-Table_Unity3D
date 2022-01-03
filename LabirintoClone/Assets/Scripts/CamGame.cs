@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CamGame : MonoBehaviour
 {
@@ -23,9 +24,13 @@ public class CamGame : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && OndeEstou.instance.fase == 0)
         {
             Application.Quit();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && OndeEstou.instance.fase != 0)
+        {
+            SceneManager.LoadScene(0);
         }
 
         if(tempGO > 0)

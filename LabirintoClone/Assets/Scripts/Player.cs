@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody rig;
     float tiltX, tiltY, sensib = 10;
-    public bool fora = true;
+    public bool fora = true, mov = false;
     [SerializeField]
     Vector3 nPos;
     CamGame gameCam;
@@ -16,12 +16,17 @@ public class Player : MonoBehaviour
     GameObject canvasTP;
     Text tTempSt;
 
+    AudioSource aud;
+
     void Start()
     {
         rig = GetComponent<Rigidbody>();
         gameCam = GameObject.Find("Main Camera").GetComponent<CamGame>();
         tTempSt = GameObject.Find("TempoStart").GetComponent<Text>();
         canvasTP = GameObject.Find("CanvasTp");
+
+        aud = GetComponent<AudioSource>();
+        mov = false;
     }
     void Update()
     {
@@ -29,6 +34,16 @@ public class Player : MonoBehaviour
         {
             if (fora)
             {
+                if(rig.velocity.magnitude >= 0.2 && !mov)
+                {
+                    aud.Play();
+                    mov = true;
+                }
+                if(rig.velocity.magnitude <= 0.2)
+                {
+                    aud.Stop();
+                    mov = false;
+                }
                 tiltX = Input.acceleration.x * sensib;
                 tiltY = Input.acceleration.y * sensib;
                 rig.velocity = new Vector3(tiltX, rig.velocity.y, tiltY);
