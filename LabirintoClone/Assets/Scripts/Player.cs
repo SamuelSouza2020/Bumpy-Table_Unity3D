@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Buraco"))
         {
-            Debug.Log("EntrouA");
+            aud.Stop();
             nPos = new Vector3(other.transform.position.x, transform.position.y,
                 other.transform.position.z);
             rig.velocity = new Vector3(rig.velocity.x, rig.velocity.y, rig.velocity.z);
@@ -107,12 +107,23 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("BuracoFim"))
         {
+            aud.Stop();
             nPos = new Vector3(other.transform.position.x, transform.position.y,
                 other.transform.position.z);
             rig.velocity = new Vector3(rig.velocity.x, rig.velocity.y, rig.velocity.z);
             StartCoroutine(PerdeuGm());
             canvasTP.SetActive(true);
             tTempSt.text = "PERDEU";
+            fora = false;
+        }
+        if (other.gameObject.CompareTag("BuracoUlt"))
+        {
+            aud.Stop();
+            nPos = new Vector3(other.transform.position.x, transform.position.y,
+                other.transform.position.z);
+            rig.velocity = new Vector3(rig.velocity.x, rig.velocity.y, rig.velocity.z);
+            canvasTP.SetActive(true);
+            tTempSt.text = "PARABÉNS, CONCLUIU A DEMONSTRAÇÃO";
             fora = false;
         }
     }
