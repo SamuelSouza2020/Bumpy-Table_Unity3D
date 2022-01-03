@@ -22,6 +22,12 @@ public class CamGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if(tempGO > 0)
         {
             if (tempoSt > 0)

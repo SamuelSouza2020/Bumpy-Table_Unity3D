@@ -1,0 +1,9 @@
+Name: Hole Table ou Bumped Table
+Data de inicio: 29/12/21
+Quantidade de Fases: 5
+
+Funções não adicionada ainda: 
+	Pause
+	Sair
+	Som da Bola
+	Talvez Pontuação e tempo 
