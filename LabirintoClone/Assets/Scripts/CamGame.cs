@@ -50,7 +50,7 @@ public class CamGame : MonoBehaviour
                 }
             }
         }
-        if(!ok)
+        if(!ok && OndeEstou.instance.fase != 0)
         {
             transform.position = Vector3.Lerp(transform.position, new Vector3(0, 15, 0), vel * Time.deltaTime);
             transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(90, 0, 0), vel * Time.deltaTime);
