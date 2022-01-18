@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BallD : MonoBehaviour
 {
+    //Todos os comandos são encontrados Unity Documentation
+    //Esse script fica no buraco que movimenta
     [SerializeField]
     GameObject bur;
 
@@ -24,14 +26,12 @@ public class BallD : MonoBehaviour
     {
         Debug.Log(rb.velocity.magnitude);
         bur.transform.position = new Vector3(gameObject.transform.position.x, bur.transform.position.y, gameObject.transform.position.z);
+        //Caso a magnitude da velocidade seja menor que 7 é adicionada uma velocidade aleatória
         if(game.ok && rb.velocity.magnitude <= 7)
         {
             rb.velocity = new Vector3(Random.Range(-6,6), 0, Random.Range(-6, 6));
         }
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = new Vector3(6, 0, 6);
-        }*/
+        //Se o player já estiver em um buraco a velocidade vai para zero.
         if(!player.fora)
         {
             rb.velocity = Vector3.zero;
