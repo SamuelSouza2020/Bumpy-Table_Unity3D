@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
+    //Todos os comandos são encontrados no Unity Documentation
+    //Script para iniciar o jogo, encontrado no Menu Principal
+    //Comtém o Botão (Start) par começar a jogar e o botão (?) informando que é um jogo demonstrativo
     [SerializeField]
     Button iniciarGm, quest, fecP;
     GameObject painAviso;
@@ -19,11 +22,11 @@ public class StartGame : MonoBehaviour
         quest = GameObject.Find("Quest").GetComponent<Button>();
 
         iniciarGm.onClick.AddListener(FaseInicial);
+        //onClick.AddListener() é usado para adicionar um evento no botão.
+        //Quando clicar no botão vai ser chamado o void com o nome que está entre parênteses ()
         quest.onClick.AddListener(AbrirP);
         fecP.onClick.AddListener(FechaP);
     }
-
-    // Update is called once per frame
     void FaseInicial()
     {
         SceneManager.LoadScene(1);
