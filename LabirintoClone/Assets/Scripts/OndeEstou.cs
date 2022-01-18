@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class OndeEstou : MonoBehaviour
 {
+    //Todos os comandos são encontrados no Unity Documentation
+    
+    //Método singleton - Para garantir que somente uma instância do objeto exista
     public static OndeEstou instance;
 
     public int fase = -1;
@@ -24,6 +27,7 @@ public class OndeEstou : MonoBehaviour
         }
         SceneManager.sceneLoaded += VerificaFase;
     }
+    //Verifica o número da fase pelo BuildIndex e o nome.
     void VerificaFase(Scene cena, LoadSceneMode modo)
     {
         fase = SceneManager.GetActiveScene().buildIndex;
