@@ -20,11 +20,8 @@ public class BallD : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         game = GameObject.Find("Main Camera").GetComponent<CamGame>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        Debug.Log(rb.velocity.magnitude);
         bur.transform.position = new Vector3(gameObject.transform.position.x, bur.transform.position.y, gameObject.transform.position.z);
         //Caso a magnitude da velocidade seja menor que 7 é adicionada uma velocidade aleatória
         if(game.ok && rb.velocity.magnitude <= 7)
