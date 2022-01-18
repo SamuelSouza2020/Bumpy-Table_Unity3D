@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    //Todos comando são encontrados Unity Documentation
+    //Todos os comandos são encontrados Unity Documentation
     Rigidbody rig;
     float tiltX, tiltY, sensib = 10;
     public bool fora = true, mov = false;
